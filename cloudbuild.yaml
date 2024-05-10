@@ -1,0 +1,7 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  script: |
+    docker build -t asia-east1-docker.pkg.dev/peaceful-branch-395402/test1/lilybuild:tag1 .
+  automapSubstitutions: true
+images:
+- 'asia-east1-docker.pkg.dev/peaceful-branch-395402/test1/lilybuild:tag1'

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>表單練習</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <form action="">
+      <!-- 名字 -->
+      <!-- required表示必填 -->
+      <label for="名字">姓名</label>
+      <input id="名字" type="text" name="name" required placeholder="王大明" />
+      <br /><br />
+      <!-- <input type="radio" id="male" name="gender" value="male" required />
+      <label for="male">男性</label>
+      <input type="radio" id="female" name="gender" value="female" />
+      <label for="female">女性</label> -->
+
+      <!-- 性別 -->
+      <label for="gender">性別</label>
+      <select name="gender" id="gender" required>
+        <option></option>
+        <option value="male">男性</option>
+        <option value="female">女性</option>
+        <option value="other">其他</option>
+      </select>
+      <br /><br />
+
+      <!-- 信箱 -->
+      <label for="信箱">信箱</label>
+      <input type="email" name="信箱" id="信箱" />
+      <br /><br />
+
+      <!-- 密碼 -->
+      <label for="密碼">密碼</label>
+      <input
+        type="password"
+        minlength="5"
+        maxlength="20"
+        id="password"
+        name="密碼"
+      />
+      <input type="checkbox" onclick="showPassword" id="show" />
+      <label for="show">顯示密碼</label>
+      <br /><br />
+
+      <!-- 年齡 -->
+      <!-- value為預設值，step可設定小數-->
+      <label for="年齡">年齡</label>
+      <input type="number" id="年齡" name="age" value="18" min="0" max="125" />
+
+      <!-- 訂閱項目 -->
+      <!-- checked表示預設打勾 -->
+      <input type="checkbox" checked name="電子報" id="電子報" value="訂閱" />
+      <label for="電子報">訂閱</label>
+      <br /><br />
+      <button type="submit">form裡面的btn預設就是submit</button>
+    </form>
+
+    <!-- js顯示密碼 -->
+    <!-- 顯示密碼or隱藏密碼 -->
+    <script>
+      let checkbox = document.querySelector("#show");
+      let password = document.querySelector("#password");
+      checkbox.addEventListener("click", () => {
+        if (password.type == "password") {
+          password.type = "text";
+        } else {
+          password.type = "password";
+        }
+      });
+    </script>
+  </body>
+</html>

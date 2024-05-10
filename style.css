@@ -1,0 +1,81 @@
+/* element selector */
+table,
+tr,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse; /* 共享邊框 */
+}
+h1 {
+  color: #c72712;
+}
+h2 {
+  color: rgba(125, 125, 125, 0.6);
+}
+
+/* id selector */
+/* 不同標籤無法設定重複id */
+#id_selector_test {
+  color: rgb(100, 25, 200);
+}
+
+/* class selector */
+/* 不同標籤可設定重複class */
+.class_selector_test {
+  color: gray;
+}
+
+/* .class_test2 {
+  font-size: 32px;
+} */
+
+/* 多個 selector 並用 */
+/* element selector + class selector */
+p.class_test2 {
+  font-size: 50px;
+}
+
+/* Descendant Selector */
+div.link1 a {
+  color: green;
+}
+
+/* Attribute Selector  */
+input[type="text"] {
+  color: blueviolet;
+}
+
+/* pseudo-class */
+/* EX.游標指過去時變色  */
+input[type="text"]:hover {
+  color: green;
+}
+
+/* pesudo-element */
+/* EX.P元素第一行加上藍色箭頭 */
+p::before {
+  content: ">>";
+  color: blue;
+}
+
+/* EX.被選取的部分更改底色 */
+*::selection {
+  background-color: lightgreen;
+}
+
+body {
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+p {
+  text-indent: 2rem;
+}
+
+h1 {
+  transition: all 2s;
+}
+
+h1:hover {
+  background-color: green;
+  color: white;
+}
